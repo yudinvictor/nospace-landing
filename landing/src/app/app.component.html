@@ -1,0 +1,127 @@
+<div class="container">
+  <div class="gradient-background"></div>
+
+  <header>
+    <div class="header-content land-block">
+      <div class="header-left">
+        <div class="header-logo">
+          Nospace
+        </div>
+      </div>
+      <div class="header-right">
+        <a class="header-twitter" href="https://twitter.com/nospace_app">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-TwitterFill"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578 9.3 9.3 0 0 1-2.958 1.13 4.66 4.66 0 0 0-7.938 4.25 13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568 4.692 4.692 0 0 1-2.104.08 4.661 4.661 0 0 0 4.352 3.234 9.348 9.348 0 0 1-5.786 1.995 9.5 9.5 0 0 1-1.112-.065 13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="first-screen land-block">
+    <div class="first-screen__title">
+      <span class="interactive-word" [style.color]="arr[this.activeTitleWordIdx].color">{{titleWord}}</span>
+      <span
+        [style]="{'--cursor-color': arr[this.activeTitleWordIdx].color ?? 'rgb(50, 48, 44)'}"
+        class="typed-cursor">
+        <div class="typed-cursor__author">
+<!--          <img [src]="arr[this.activeTitleWordIdx].img" alt="">-->
+          <span>{{arr[this.activeTitleWordIdx].author}}</span>
+        </div>
+      </span>
+      <br class="divider-first-screen-title">
+      workspace <br>
+      you'll enjoy using
+    </div>
+
+    <div class="first-screen__description">
+      Nospace is the next-generation workspace <br class="divider-description"> for high-performance teams.
+    </div>
+
+    <div class="first-screen__invite">
+      <div class="wrap-invite-input">
+        <div class="invite-input__background"></div>
+        <div class="invite-input">
+          <input type="email" placeholder="Enter your email">
+          <div class="invite-input__button">
+            Request
+            <span> access</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="first-screen__screenshot">
+
+      <div class="channel-screen-list">
+        <div class="channel-screen-list-item"
+             [class.channel-screen-list-item__selected]="activeImgIdx == 0"
+             (click)="activeImgIdx = 0">
+          <div class="channel-screen-list-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-CheckBox"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 12l2.25 2L15 10"/></svg>
+          </div>
+          <div class="channel-screen-list-item__text">Tasks</div>
+        </div>
+        <div class="channel-screen-list-item"
+             [class.channel-screen-list-item__selected]="activeImgIdx == 1"
+             (click)="activeImgIdx = 1">
+          <div class="channel-screen-list-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Pencil"><path d="M4.333 16.048L16.57 3.81a2.56 2.56 0 0 1 3.62 3.619L7.951 19.667a2 2 0 0 1-1.022.547L3 21l.786-3.93a2 2 0 0 1 .547-1.022z"/><path d="M14.5 6.5l3 3"/></svg>
+          </div>
+          <div class="channel-screen-list-item__text">Whiteboard</div>
+        </div>
+
+        <div class="channel-screen-list-item"
+             [class.channel-screen-list-item__selected]="activeImgIdx == 2"
+             (click)="activeImgIdx = 2">
+          <div class="channel-screen-list-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ChatBubble"><path d="M14 19c3.771 0 5.657 0 6.828-1.172C22 16.657 22 14.771 22 11c0-3.771 0-5.657-1.172-6.828C19.657 3 17.771 3 14 3h-4C6.229 3 4.343 3 3.172 4.172 2 5.343 2 7.229 2 11c0 3.771 0 5.657 1.172 6.828.653.654 1.528.943 2.828 1.07"/><path d="M14 19c-1.236 0-2.598.5-3.841 1.145-1.998 1.037-2.997 1.556-3.489 1.225-.492-.33-.399-1.355-.212-3.404L6.5 17.5"/></svg>
+          </div>
+          <div class="channel-screen-list-item__text">Chat</div>
+        </div>
+
+        <div class="channel-screen-list-item channel-screen-list-item__disable">
+          <div class="channel-screen-list-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-File"><path d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.342a2 2 0 0 0-.602-1.43l-4.44-4.342A2 2 0 0 0 13.56 2H6a2 2 0 0 0-2 2z"/><path d="M9 13h6"/><path d="M9 17h3"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
+          </div>
+          <div class="channel-screen-list-item__text">Documents</div>
+        </div>
+        <div class="channel-screen-list-item channel-screen-list-item__disable">
+          <div class="channel-screen-list-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Headphone"><path d="M2 13.565C2 11.512 4 11 6 11v9a4 4 0 0 1-4-4v-2.435z"/><path d="M22 13.565C22 11.512 20 11 18 11v9a4 4 0 0 0 4-4v-2.435z"/><path d="M6 20V10a6 6 0 1 1 12 0v10"/></svg>
+          </div>
+          <div class="channel-screen-list-item__text">Voice room</div>
+        </div>
+        <div class="channel-screen-list-item channel-screen-list-item__disable">
+          <div class="channel-screen-list-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Attach"><path d="M6 7.91V16a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V6a4 4 0 0 0-4-4v0a4 4 0 0 0-4 4v9.182a2 2 0 0 0 2 2v0a2 2 0 0 0 2-2V8"/></svg>
+          </div>
+          <div class="channel-screen-list-item__text">File store</div>
+        </div>
+
+        <div class="and-much-more channel-screen-list-item channel-screen-list-item__much-more">
+          <div class="channel-screen-list-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-VictoryHand"><path d="M12 11l-1-7.272c0-.466.185-.913.515-1.243 1.024-1.024 2.777-.44 2.982.994L16 10l1.508-6.328a1.682 1.682 0 0 1 3.276.73L19 16"/><path d="M19 16c-.536 4-3.358 6-7.5 6C7.358 22 4 20 4 16"/><path d="M4 16v-4a2 2 0 1 1 4 0m4 1v-2a2 2 0 1 0-4 0v4"/><path d="M13.692 17H11a2 2 0 1 1 0-4h4c2.21 0 4.5 2 3.5 5"/></svg>
+          </div>
+          <div class="channel-screen-list-item__text">And much more...</div>
+        </div>
+
+      </div>
+
+
+      <div class="wrap-screenshot">
+        <div class="screenshot">
+          <img [src]="images[activeImgIdx]" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="land-block">
+    <div class="footer__say">
+      Contact us <a href="">yudin.production@gmail.com</a> or follow <a  href="https://twitter.com/nospace_app">@nospace_app</a> for invites
+    </div>
+  </div>
+</footer>
