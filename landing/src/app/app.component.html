@@ -34,21 +34,26 @@
       you'll enjoy using
     </div>
 
+
     <div class="first-screen__description">
       Nospace is the next-generation workspace <br class="divider-description"> for high-performance teams.
     </div>
 
+    <div id="success-request" class="first-screen__invite_ok"></div>
+
     <div class="first-screen__invite">
+      <form id="request-form" action="https://formspree.io/f/myyozgyn" method="POST">
       <div class="wrap-invite-input">
         <div class="invite-input__background"></div>
         <div class="invite-input">
-          <input type="email" placeholder="Enter your email">
-          <div class="invite-input__button">
+          <input name="email" type="email" placeholder="Enter your email">
+          <button id="request-btn" class="invite-input__button">
             Request
             <span> access</span>
-          </div>
+          </button>
         </div>
       </div>
+      </form>
     </div>
 
     <div class="first-screen__screenshot">
