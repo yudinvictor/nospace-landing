@@ -4,6 +4,21 @@
   position: relative;
 }
 
+.demo-for-hyper {
+  cursor: pointer;
+  background-color: #0F0F0F;
+  color: white;
+  font-weight: 600;
+  margin-right: 24px;
+  font-size: 18px;
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 a {
   text-decoration: none;
 }

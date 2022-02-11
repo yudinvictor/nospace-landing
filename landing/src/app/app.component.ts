@@ -24,7 +24,7 @@ export class AppComponent {
     },
     {
       color: '#54A5D8',
-      word: 'Secure',
+      word: 'Offline-first',
       author: 'Shestakov Anton',
     },
     {
@@ -39,6 +39,7 @@ export class AppComponent {
     'assets/first_screen/task.png',
     'assets/first_screen/whiteboard.png',
     'assets/first_screen/chat.png',
+    'assets/first_screen/editor.png',
   ];
 
   titleWord = '';
