@@ -1,0 +1,138 @@
+.Form {
+  width: 700px;
+  height: 100vh;
+  background: white;
+  padding: 48px 0;
+
+
+  --borderColor: rgba(0, 24, 42, .05);
+  --shadow: 0px 9px 24px -3px rgba(0, 0, 0, .16), 0px 4px 8px -1px rgba(0, 0, 0, .08);
+
+  z-index: 101;
+  position: absolute;
+  right: 0;
+  border-left: 1px solid var(--borderColor);
+  box-shadow: var(--shadow);
+}
+
+.Form--open {
+  animation: formOpen 0.4s forwards;
+
+  @keyframes formOpen {
+    from {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+    to {
+      transform: none;
+    }
+  }
+
+}
+
+.Form-header {
+  padding: 0 48px;
+  margin: 0 0 40px;
+}
+
+.Form-title {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 16px;
+
+  img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.Form-description {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--gray650);
+  line-height: 150%;
+  max-width: 700px;
+  letter-spacing: .3px;
+  margin-bottom: 16px;
+}
+
+.Form-success {
+
+  position: relative;
+  color: #117e47;
+
+  &:before {
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    background: hsla(117, 91%, 40%, 0.1);
+    content: '';
+    transform: scale(1.05);
+    border-radius: 6px;
+  }
+
+}
+
+.Form-content {
+  padding: 0 48px;
+}
+
+.Form-block {
+  margin-bottom: 24px;
+}
+
+.Input-input {
+  max-width: 350px;
+}
+
+.Form-footer {
+  padding: 0 48px;
+}
+
+.Button-submit {
+  outline: none;
+  border: none;
+}
+
+.Button-submit .Button-submit:not([disabled]):hover {
+  background: var(--action-hover);
+}
+
+
+.Button-submit  {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  height: 32px;
+  padding: 6px 16px;
+  border: 0;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition-property: color, background, background-color, box-shadow;
+  transition-duration: var(--animation-duration-default);
+  background: var(--white);
+  color: var(--text-default);
+  box-shadow: var(--highlight-light), inset 0px 0px 0px 1px var(--object-border);
+}
+
+.Button-submit {
+  color: var(--white);
+  background: var(--action);
+  box-shadow: var(--highlight-light);
+}
+
+.Button-submit.disabled {
+  opacity: 0.5;
+}

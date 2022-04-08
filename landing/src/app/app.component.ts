@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormService} from "./form/form.service";
 
 @Component({
   selector: 'app-root',
@@ -88,7 +89,7 @@ export class AppComponent {
   }
 
 
-  constructor() { }
+  constructor(public form: FormService) { }
 
   ngOnInit(): void {
     this.titleWord = 'All-in-one';

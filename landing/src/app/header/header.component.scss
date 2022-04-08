@@ -1,0 +1,161 @@
+:host {
+  height: 60px;
+  width: 100%;
+  display: flex;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 32px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.HeaderButtons {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderButtonsAuth {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderButtonLogin, .HeaderButtonRegistration {
+  font-weight: 500;
+  color: var(--text-default);
+  padding: 7px 10px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.175s;
+  user-select: none;
+}
+
+.HeaderButtonLogin {
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    z-index: -1;
+    transition: 0.1s;
+    transform: scale(0.97);
+    border-radius: 6px;
+  }
+
+  &:hover:before {
+    background: rgba(0,0,0,0.08);
+    transform: scale(1);
+  }
+
+  &:active:before {
+    background: rgba(0,0,0,0.16);
+    transform: scale(1);
+  }
+}
+
+.HeaderButtonRegistration {
+  color: white;
+  margin-left: 12px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    z-index: -1;
+    transition: 0.175s;
+    border-radius: 6px;
+  }
+
+  &:hover:before {
+    background: rgba(0,0,0,0.15);
+  }
+
+  &:active:before {
+    background: rgba(0,0,0,0.3);
+  }
+}
+
+.AnimatedBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--controlBorderRadius6px);
+  overflow: hidden;
+  z-index: -2;
+}
+
+.HeaderSocialList {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--gray150);
+  padding-left: 24px;
+  margin-left: 24px;
+
+  .HeaderSocialItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+    color: var(--gray800);
+    transition: 0.1s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.HeaderSocialItem-twitter {
+  &:hover {
+    color: #1DA1F2 !important;
+  }
+}
+
+.HeaderSocialItem-discord {
+  &:hover {
+    color: #5865F2 !important;
+  }
+}
+
+.HeaderLogo {
+  display: flex;
+  align-items: center;
+  user-select: none;
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    width: 26px;
+    margin-right: 12px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &-text {
+    font-family: 'Cereal', 'Segoe UI', sans-serif !important;
+    color: #FF6343;
+    color: var(--gray800);
+    font-weight: 600;
+    font-size: 24px;
+  }
+}
