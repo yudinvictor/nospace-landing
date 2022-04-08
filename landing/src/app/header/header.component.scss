@@ -159,3 +159,44 @@
     font-size: 24px;
   }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .Header {
+    padding: 0 16px;
+  }
+
+  .HeaderLogo {
+    &-icon {
+      width: 20px;
+      margin-right: 8px;
+    }
+
+    &-text {
+      font-size: 19px;
+    }
+  }
+
+  .HeaderButtonLogin, .HeaderButtonRegistration {
+    padding: 7px 8px;
+  }
+
+  .HeaderSocialList {
+    padding-left: 0px;
+    margin-left: 16px;
+    border-left: none;
+
+    .HeaderSocialItem {
+      width: 22px;
+      height: 22px;
+      margin-right: 16px;
+    }
+  }
+
+  .HeaderButtonLogin {
+    display: none;
+  }
+
+  .HeaderButtonRegistration {
+    margin-left: 6px;
+  }
+}

@@ -1,8 +1,9 @@
 .Page {
   --borderColor: rgba(0, 24, 42, .05);
-  min-height: 100vh;
+  height: 100vh;
   background: #fcfcfc;
   position: relative;
+  overflow: auto;
 }
 
 a {
