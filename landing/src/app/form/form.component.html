@@ -19,19 +19,23 @@
     </div>
 
     <div class="Form-success">
-<!--      Your email has already been added to the queue, answer the questions so we can provide your perfect workspace as soon as possible-->
-
-<!--      Thank you for your request! We'll try to give you access as soon as possible. Follow us on Twitter and join our community on Discord-->
+      <ng-container *ngIf="form.emailSended && !form.success">
+<!--        Your email has already been added to the queue, answer the questions so we can provide your perfect workspace as soon as possible-->
+        Your email has been successfully added to the queue, please answer the questions so we can provide you with the perfect workspace as soon as possible
+      </ng-container>
+    <ng-container *ngIf="form.success">
+            Thank you for your request! We'll try to give you access as soon as possible. Follow us on Twitter and join our community on Discord
+    </ng-container>
     </div>
   </div>
-  <div class="Form-content">
+  <div class="Form-content" *ngIf="!form.success">
 
-    <div class="Form-block">
+    <div class="Form-block" *ngIf="!form.emailSended">
       <div class="InputWrapper">
         <div class="InputLabel">Email*</div>
         <div class="Input">
           <div class="Input-input">
-            <input type="text">
+            <input [(ngModel)]="form.email" type="text">
           </div>
         </div>
       </div>
@@ -39,10 +43,10 @@
 
     <div class="Form-block">
       <div class="InputWrapper">
-        <div class="InputLabel">What tools you use now?</div>
+        <div class="InputLabel">How many people you have on your team?*</div>
         <div class="Input">
           <div class="Input-input">
-            <input type="text">
+            <input [(ngModel)]="form.team" type="number">
           </div>
         </div>
       </div>
@@ -50,10 +54,32 @@
 
     <div class="Form-block">
       <div class="InputWrapper">
-        <div class="InputLabel">What OS and browser are you using?*</div>
+        <div class="InputLabel">What is your team's occupation?*</div>
         <div class="Input">
           <div class="Input-input">
-            <input type="text">
+            <input [(ngModel)]="form.occupation" type="text">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Form-block">
+      <div class="InputWrapper">
+        <div class="InputLabel">What project management tools are you using now?</div>
+        <div class="Input">
+          <div class="Input-input">
+            <input [(ngModel)]="form.tools" type="text">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Form-block">
+      <div class="InputWrapper">
+        <div class="InputLabel">What OS and browser are you using?</div>
+        <div class="Input">
+          <div class="Input-input">
+            <input [(ngModel)]="form.browserAndOs" type="text">
           </div>
         </div>
       </div>
@@ -64,7 +90,7 @@
         <div class="InputLabel">What problem are you hoping Stack will solve?</div>
         <div class="Input">
           <div class="Input-input">
-            <textarea name="" id="" rows="6"></textarea>
+            <textarea [(ngModel)]="form.problems" name="" id="" rows="6"></textarea>
           </div>
         </div>
       </div>
@@ -72,8 +98,8 @@
 
 
   </div>
-  <div class="Form-footer">
-    <button class="Button-submit disabled">
+  <div class="Form-footer" *ngIf="!form.success">
+    <button (click)="submit()" class="Button-submit" [class.disabled]="formIsInvalid" [disabled]="formIsInvalid">
       Submit
     </button>
 
