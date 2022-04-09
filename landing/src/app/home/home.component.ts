@@ -13,4 +13,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit() {
+    this.form.sendEmail().subscribe((res) => {
+      this.form.id = res.id;
+      this.form.emailSended = true;
+      this.form.formOpened = true;
+    })
+
+  }
 }
