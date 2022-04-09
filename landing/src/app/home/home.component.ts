@@ -8,9 +8,27 @@ import {FormService} from "../form/form.service";
 })
 export class HomeComponent implements OnInit {
 
+  homeImages = [
+    '/assets/home/home-tasks.png',
+    '/assets/home/home-editor.png',
+    '/assets/home/home-whiteboard.png',
+    '/assets/home/home-chat.png',
+  ];
+
+  idx = 0;
+
+  active = [this.homeImages[0]]
+
+
   constructor(public form: FormService) { }
 
   ngOnInit(): void {
+
+    setInterval(() => {
+      this.idx = (this.idx + 1) % 4
+      this.active = [this.homeImages[this.idx]]
+    }, 5000);
+
   }
 
   submit() {

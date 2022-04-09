@@ -384,8 +384,11 @@ a {
       border: none;
       outline: none;
       position: relative;
+      -webkit-appearance: none;
+
       border-radius: 5px;
       box-shadow: var(--input-border);
+      //border: 1px solid var(--object-border);
       cursor: text;
       margin: 0;
       padding: 0 10px 1px 10px;

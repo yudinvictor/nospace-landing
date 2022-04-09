@@ -106,10 +106,15 @@
 .Button-submit {
   outline: none;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #dc3f20;
+  }
 }
 
 .Button-submit .Button-submit:not([disabled]):hover {
-  background: var(--action-hover);
+
 }
 
 

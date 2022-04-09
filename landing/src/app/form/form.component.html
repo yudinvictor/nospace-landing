@@ -1,7 +1,5 @@
 <div class="Form Form--open">
 
-
-
   <div class="Form-header">
     <div (click)="form.formOpened = false" class="Form-close">
       <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
@@ -18,9 +16,8 @@
       We tailor your onboarding experience to match what you're looking for. Tell us more about yourself and your team to help us out.
     </div>
 
-    <div class="Form-success">
+    <div *ngIf="(form.success) || (form.emailSended && !form.success)" class="Form-success">
       <ng-container *ngIf="form.emailSended && !form.success">
-<!--        Your email has already been added to the queue, answer the questions so we can provide your perfect workspace as soon as possible-->
         Your email has been successfully added to the queue, please answer the questions so we can provide you with the perfect workspace as soon as possible
       </ng-container>
     <ng-container *ngIf="form.success">
