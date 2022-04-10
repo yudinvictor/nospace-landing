@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormService} from "../form/form.service";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -17,8 +18,7 @@ export class HomeComponent implements OnInit {
 
   idx = 0;
 
-  active = [this.homeImages[0]]
-
+  active = [{src: this.homeImages[0]}];
 
   constructor(public form: FormService) { }
 
@@ -26,8 +26,8 @@ export class HomeComponent implements OnInit {
 
     setInterval(() => {
       this.idx = (this.idx + 1) % 4
-      this.active = [this.homeImages[this.idx]]
-    }, 5000);
+      this.active = [{ src: this.homeImages[this.idx]}]
+    }, 5200);
 
   }
 

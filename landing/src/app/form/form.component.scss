@@ -66,6 +66,10 @@
   max-width: min(90vh, 700px);
   letter-spacing: .3px;
   margin-bottom: 16px;
+
+  a {
+    color: var(--action);
+  }
 }
 
 .Form-success {

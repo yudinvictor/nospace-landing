@@ -14,6 +14,8 @@
 
     <div class="Form-description">
       We tailor your onboarding experience to match what you're looking for. Tell us more about yourself and your team to help us out.
+      <br>
+      Contact us <a href="mailto:hello@usestack.app">hello@usestack.app</a>
     </div>
 
     <div *ngIf="(form.success) || (form.emailSended && !form.success)" class="Form-success">
@@ -73,10 +75,10 @@
 
     <div class="Form-block">
       <div class="InputWrapper">
-        <div class="InputLabel">What OS and browser are you using?</div>
+        <div class="InputLabel">What problem are you hoping Stack will solve?</div>
         <div class="Input">
           <div class="Input-input">
-            <input [(ngModel)]="form.browserAndOs" type="text">
+            <textarea [(ngModel)]="form.problems" name="" id="" rows="6"></textarea>
           </div>
         </div>
       </div>
@@ -84,10 +86,10 @@
 
     <div class="Form-block">
       <div class="InputWrapper">
-        <div class="InputLabel">What problem are you hoping Stack will solve?</div>
+        <div class="InputLabel">How did you hear about us?</div>
         <div class="Input">
           <div class="Input-input">
-            <textarea [(ngModel)]="form.problems" name="" id="" rows="6"></textarea>
+            <input [(ngModel)]="form.browserAndOs" type="text">
           </div>
         </div>
       </div>
