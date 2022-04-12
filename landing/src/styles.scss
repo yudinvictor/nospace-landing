@@ -500,3 +500,10 @@ a {
 
   }
 }
+
+
+.hide-img {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
